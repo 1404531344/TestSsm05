@@ -1,0 +1,43 @@
+#msg{
+    width:80%; /* 使用百分比作为宽度 */
+    position: fixed;
+    z-index:999;
+    top: 50%; /* 使用百分比作为垂直居中 */
+    margin-top:-40px; /* 使用百分比计算垂直居中 */
+    left:50%;
+    margin-left:-40%; /* 使用百分比计算水平居中 */
+    background:#fff;
+    box-shadow:0.5rem 0.5rem 0.8rem #999; /* 使用rem作为阴影大小 */
+    font-size:1rem; /* 使用rem作为字体大小 */
+    color:#666;
+    border:0.1rem solid #f8f8f8;
+    text-align: center;
+    line-height: 2rem;
+    display:inline-block;
+    padding-bottom:2rem;
+    border-radius:2px;
+}
+#msg_top{
+    background:#f8f8f8;
+    padding:0.5rem 1.5rem 0.5rem 2rem; /* 使用rem作为内边距 */
+    text-align:left;
+}
+#msg_top span{
+    font-size:1.375rem; /* 使用rem作为字体大小 */
+    float:right;
+    cursor:pointer;
+}
+#msg_cont{
+    padding:1.5rem 2rem 2rem;
+    text-align:left;
+}
+#msg_clear{
+    display:inline-block;
+    color:#fff;
+    padding:0.1rem 1.5rem;
+    background:#8fc31f;
+    border-radius:2px;
+    float:right;
+    margin-right:15px;
+    cursor:pointer;
+}
