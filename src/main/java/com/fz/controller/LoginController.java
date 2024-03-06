@@ -19,17 +19,20 @@ public class LoginController {
 //    根据名字密码查询
 
     @RequestMapping("login.action")
-    public String findByNameAndPwd(User user, HttpSession session) {
-        //从数据库中查询用户信息
+    public String findByNameAndPwd(User user) {
         User user1 = userService.findByNameAndPwd(user);
-        //将查询到的用户信息存入session
-        session.setAttribute("admin",user1);
-            String url = "login";
 
-            if (user1 != null) {
-                url = "index";
-            }
-            return url;
+        String url = "login";
+        if (user1 != null) {
+            url = "index";
+
+            System.out.println("登录成功");
+        }
+        return url;
+
+
+
+
     }
 
 //    @RequestMapping("logout.action")

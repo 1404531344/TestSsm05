@@ -10,18 +10,26 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Service("userService")
+/*
+* 写逻辑操作的
+* */
 public class UserServiceImp  implements UserService {
 
 
     @Resource
     private UserDao userDao;
 
+   //注入session
+    @Resource
+    private HttpSession session;
+
+
 
     @Override
     public User findByNameAndPwd(User user) {
-
-
-        return this.userDao.findByNameAndPwd(user);
+      User user1 =  userDao.findByNameAndPwd(user);
+        session.setAttribute("admin",user1);
+        return user1;
     }
 
     @Override

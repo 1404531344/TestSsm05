@@ -6,6 +6,9 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 @Mapper
+/*
+* 写数据库相关的
+* */
 public interface UserDao {
 
 
