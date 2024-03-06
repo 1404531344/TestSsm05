@@ -2,9 +2,14 @@ package com.fz.service;
 
 import com.fz.entity.User;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 public interface UserService {
+
+    //    根据名字密码查询（登录）
+    User findByNameAndPwd(User user);
+
 
     //    查询所有
     List<User> findAll();

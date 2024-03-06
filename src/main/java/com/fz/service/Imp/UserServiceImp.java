@@ -6,6 +6,7 @@ import com.fz.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Service("userService")
@@ -14,6 +15,14 @@ public class UserServiceImp  implements UserService {
 
     @Resource
     private UserDao userDao;
+
+
+    @Override
+    public User findByNameAndPwd(User user) {
+
+
+        return this.userDao.findByNameAndPwd(user);
+    }
 
     @Override
     public List<User> findAll() {

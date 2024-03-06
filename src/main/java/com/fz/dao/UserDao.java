@@ -9,6 +9,10 @@ import java.util.List;
 public interface UserDao {
 
 
+//    根据名字密码查询（登录）
+    User findByNameAndPwd(User user);
+
+
     //    查询所有
     List<User> findAll();
 
@@ -27,5 +31,6 @@ public interface UserDao {
 
 //修改
     int updateUser(User user);
+
 
 }

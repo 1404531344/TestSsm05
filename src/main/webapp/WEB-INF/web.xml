@@ -6,6 +6,10 @@
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
   version="4.0">
 
+<!--    默认登录页-->
+ <welcome-file-list>
+     <welcome-file>login.jsp</welcome-file>
+ </welcome-file-list>
 
     <!-- 解决工程编码过滤器 解决乱码问题-->
     <filter>
@@ -54,7 +58,7 @@
 <!--    servlet 映射-->
     <servlet-mapping>
         <servlet-name>springMvc</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/      </url-pattern>
     </servlet-mapping>
 
     <!--    允许默认通过的路径-->

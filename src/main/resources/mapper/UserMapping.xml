@@ -6,6 +6,16 @@
 
 <mapper namespace="com.fz.dao.UserDao">
 
+
+<!--    根据名字密码查询（登录）-->
+
+    <select id="findByNameAndPwd" parameterType="com.fz.entity.User" resultType="com.fz.entity.User">
+        select * from user where name = #{name} and password = #{password}
+
+    </select>
+
+
+
 <!--查询所有-->
     <select id="findAll" resultType="com.fz.entity.User">
         select * from user
